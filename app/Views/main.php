@@ -8,6 +8,7 @@
 <body>
     <h1>CRUD</h1>
     <form action="<?=base_url('save')?>" method="post">
+    <input type="hidden" name="id" value="<?= isset($u['id']) ? $u['id'] : '' ?>">
     <label>Student ID: </label>
     <input type="text" name="studentID" placeholder="">
     <br><br>
@@ -37,7 +38,7 @@
             <th><?=$i['yearLevel']?></th>
             <th><?=$i['program']?></th>
             <th>
-                <a href="/update/<?=$i['id']?>">edit</a>
+                <a href="/edit/<?=$i['id']?>">edit</a>
                 <a href="/delete/<?=$i['id']?>">delete</a>
             </th>
         </tr>
